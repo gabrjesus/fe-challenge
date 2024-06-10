@@ -1,0 +1,7 @@
+@use '@angular/material' as mat;
+
+@mixin app-theme($theme) {
+  .container-home {
+    background-color: mat.get-theme-color($theme, background, background);
+  }
+}
