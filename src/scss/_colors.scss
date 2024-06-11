@@ -12,3 +12,17 @@ $color-neutral-content-onSource: #0a0a0a;
 
 $color-main-heading: #00b5cc;
 $color-main-heading-stroke: #b2df28;
+
+$theme-colors: (
+  'background': $color-core-background,
+  'foreground': $color-core-foreground,
+  'border': $color-core-border,
+  'content-low': $color-core-content-low,
+  'surface': $color-neutral-surface,
+  'content': $color-neutral-content,
+  'content-high': $color-neutral-content-high,
+  'content-higher': $color-neutral-content-higher,
+  'content-onSource': $color-neutral-content-onSource,
+  'heading': $color-main-heading,
+  'heading-stroke': $color-main-heading-stroke
+);

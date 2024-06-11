@@ -1,1 +1,7 @@
-<p>list works!</p>
+<div class="container">
+  <div class="list justify-content-between gap-4">
+    @for (item of list$ | async; track item.id) {
+      <app-card [item]="item"></app-card>
+    }
+  </div>
+</div>

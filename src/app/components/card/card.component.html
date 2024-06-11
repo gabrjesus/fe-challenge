@@ -1,0 +1,11 @@
+<mat-card class="card">
+  <mat-icon class="card__favorite">favorite</mat-icon>
+
+  <img class="card__image" mat-card-image [src]="item?.image" alt="Imagem do personagem" />
+  <mat-card-content class="pt-2">
+    <span class="card__title">{{ item?.name }}</span>
+    <p class="card__description">
+      {{ item?.species }}
+    </p>
+  </mat-card-content>
+</mat-card>

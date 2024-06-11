@@ -1,4 +1,4 @@
-import { Component, HostBinding } from '@angular/core';
+import { ChangeDetectorRef, Component, HostBinding, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -26,13 +26,22 @@ import { NavComponent } from './components/nav/nav.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   @HostBinding('class')
   currentTheme: 'light-theme' | 'dark-theme' = 'dark-theme';
+
+  // Previne espaçamento indesejado em dispositivos mobile
+  @HostBinding('style.viewHeight') viewHeight: string = '100vh';
+
+  cdr = inject(ChangeDetectorRef);
 
   isDarkMode: boolean = true;
 
   title = 'Rick and Morty!';
+
+  ngOnInit(): void {
+    this.viewHeight = `${window.innerHeight - 64}px`;
+  }
 
   onThemeChanged() {
     this.isDarkMode = !this.isDarkMode;

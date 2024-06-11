@@ -1,8 +1,8 @@
-<main class="app flex flex-direction-column mat-app-background">
-  <mat-toolbar class="flex justify-content-between align-items-center">
+<main class="app d-flex flex-column mat-app-background h-full overflow-hidden">
+  <mat-toolbar class="d-flex justify-content-between align-items-center">
     <img src="../assets/images/logo.png" alt="Logo Rick and Morty" />
 
-    <div class="flex align-items-center gap-4">
+    <div class="d-flex align-items-center gap-4">
       <mat-icon>brightness_5</mat-icon>
       <mat-slide-toggle (change)="onThemeChanged()" [checked]="isDarkMode"> </mat-slide-toggle>
       <mat-icon>bedtime</mat-icon>
@@ -11,7 +11,7 @@
     <app-nav></app-nav>
   </mat-toolbar>
 
-  <div class="router h-full">
+  <div class="router w-full h-full mx-auto overflow-auto">
     <router-outlet></router-outlet>
   </div>
 </main>
