@@ -1,0 +1,11 @@
+<div class="flex flex-direction-column gap-12 h-full">
+  <app-header class="mt-12"></app-header>
+
+  @if (list.length) {
+    <app-list></app-list>
+  }
+
+  @if (!isFirstSearch && !list.length) {
+    <app-no-results class="h-full"></app-no-results>
+  }
+</div>

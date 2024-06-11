@@ -1,0 +1,22 @@
+@import '../../../../../scss/colors';
+
+.container {
+  border: 1px solid $color-core-border;
+  border-radius: 12px;
+
+  background-color: $color-core-foreground;
+
+  height: 100%;
+  max-height: 400px;
+
+  &__title {
+    font-size: 24px;
+    color: #fafafa;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 18px;
+    color: $color-core-content-low;
+  }
+}

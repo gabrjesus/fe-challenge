@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { NavComponent } from './components/nav/nav.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatSlideToggleModule,
     ReactiveFormsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    NavComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

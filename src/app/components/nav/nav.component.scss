@@ -1,0 +1,68 @@
+@import '../../../scss/colors';
+
+.nav {
+  display: flex;
+
+  max-height: 40px;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $color-core-border;
+
+    text-decoration: none;
+
+    padding: 8px 16px;
+    gap: 8px;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    color: $color-neutral-content;
+
+    transition: all 0.2s ease-in-out;
+
+    .counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding: 5.5px;
+
+      &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+
+        border-radius: 50%;
+        background-color: #fff;
+
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-core-border;
+
+        color: $color-core-foreground;
+      }
+    }
+
+    &:hover {
+      -webkit-box-shadow: inset 1px -14px 21px -16px rgba(178, 223, 40, 1);
+      -moz-box-shadow: inset 1px -14px 21px -16px rgba(178, 223, 40, 1);
+      box-shadow: inset 1px -14px 21px -16px rgba(178, 223, 40, 1);
+    }
+
+    &:first-child {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  }
+}

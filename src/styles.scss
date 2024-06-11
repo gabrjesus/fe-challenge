@@ -12,14 +12,24 @@ body {
 
 @include theme.create-light-theme();
 
+.link-active {
+  color: $color-neutral-surface !important;
+  background-color: $color-core-foreground !important;
+}
+
 .dark-theme {
   @include theme.create-dark-theme();
 
   .mat-app-background {
-    background-color: #1f1f1f;
+    background-color: $color-core-background;
   }
 
   .mat-toolbar {
-    background-color: #0a0a0a;
+    background-color: $color-core-foreground;
+  }
+
+  .link-active {
+    color: $color-core-foreground !important;
+    background-color: $color-neutral-surface !important;
   }
 }

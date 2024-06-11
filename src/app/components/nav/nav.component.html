@@ -1,0 +1,13 @@
+<nav class="nav">
+  <a class="nav__link" [routerLink]="['/home']" routerLinkActive="link-active">
+    <mat-icon>home</mat-icon>
+    Início
+  </a>
+  <a class="nav__link" [routerLink]="['/favoritos']" routerLinkActive="link-active">
+    <mat-icon>favorite</mat-icon>
+    Favoritos
+    <div class="counter">
+      <span class="counter__number">3</span>
+    </div>
+  </a>
+</nav>
