@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, HostBinding, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostBinding, OnInit, ViewChild, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -27,11 +27,10 @@ import { NavComponent } from './components/nav/nav.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+  @ViewChild('router', { static: true }) routerViewHeight!: ElementRef<HTMLDivElement>;
+
   @HostBinding('class')
   currentTheme: 'light-theme' | 'dark-theme' = 'dark-theme';
-
-  // Previne espaçamento indesejado em dispositivos mobile
-  @HostBinding('style.viewHeight') viewHeight: string = '100vh';
 
   cdr = inject(ChangeDetectorRef);
 
@@ -40,7 +39,7 @@ export class AppComponent implements OnInit {
   title = 'Rick and Morty!';
 
   ngOnInit(): void {
-    this.viewHeight = `${window.innerHeight - 64}px`;
+    this.routerViewHeight.nativeElement.style.maxHeight = `${window.innerHeight - 64}px`;
   }
 
   onThemeChanged() {

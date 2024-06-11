@@ -21,6 +21,8 @@ body {
 .dark-theme {
   @include theme.create-dark-theme();
 
+  scrollbar-color: $color-neutral-surface $color-core-foreground;
+
   .mat-app-background {
     background-color: $color-core-background;
   }

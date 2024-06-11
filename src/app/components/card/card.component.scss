@@ -8,7 +8,7 @@
 
   height: 100%;
 
-  &__favorite {
+  .favorite {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -18,6 +18,22 @@
 
     color: $color-neutral-content-onSource;
     z-index: 10;
+
+    &__input {
+      display: none;
+
+      &:checked + .favorite__label::before {
+        content: url('/assets/icons/favorite_fill.svg');
+      }
+    }
+
+    &__label {
+      &::before {
+        content: url('/assets/icons/favorite.svg');
+      }
+
+      cursor: pointer;
+    }
   }
 
   &__image {

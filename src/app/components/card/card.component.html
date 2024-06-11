@@ -1,5 +1,9 @@
 <mat-card class="card">
-  <mat-icon class="card__favorite">favorite</mat-icon>
+  <div class="favorite">
+    <input class="favorite__input" type="checkbox" [name]="item?.name" [id]="item?.id" />
+    <label class="favorite__label" [for]="item?.id"></label>
+  </div>
+  <!-- <mat-icon class="card__favorite">favorite</mat-icon> -->
 
   <img class="card__image" mat-card-image [src]="item?.image" alt="Imagem do personagem" />
   <mat-card-content class="pt-2">

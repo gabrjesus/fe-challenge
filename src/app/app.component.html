@@ -11,7 +11,9 @@
     <app-nav></app-nav>
   </mat-toolbar>
 
-  <div class="router w-full h-full mx-auto overflow-auto">
-    <router-outlet></router-outlet>
+  <div class="router w-full h-full overflow-auto">
+    <div class="router__wrapper mx-auto" #router>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </main>
